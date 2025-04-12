@@ -1,0 +1,25 @@
+{% extends "base.html" %} 
+
+{% block title %}
+Ajouter une Piece
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <div class="form-container">
+        <h1>Ajouter une pièce</h1>
+        <form method="POST" action="#">
+            {% csrf_token %}
+            
+           
+            <label for="nom_piece">Nom de la pièce :</label>
+            <input type="text" id="nom_piece" name="nom_piece" placeholder="Entrez le nom de la pièce" required>
+            
+            
+            <button type="submit", name="submit_new_piece", value="submit_new_piece">Ajouter</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

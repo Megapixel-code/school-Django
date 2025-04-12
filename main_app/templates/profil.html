@@ -1,0 +1,59 @@
+{% extends "base.html" %} 
+
+{% block title %}
+Profil
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Mon Profil</h1>
+  <div class="profile-photo"></div>
+
+  <form method="post" action="#" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    <div class="form-group">
+      <h2>Informations personnelles</h2>
+
+      <label for="nom">Username :</label>
+      <input type="text" id="Username" value="{{ user.username }}" disabled>
+
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" value="{{ user.last_name }}" disabled>
+
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" value="{{ user.first_name }}" disabled>
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" value="{{ user.email }}" disabled>
+
+    </div>
+
+    <div class="form-group">
+      <h2>Ma Maison</h2>
+
+      <label for="adresse">Adresse :</label>
+      <input type="text" id="adresse" value="{{ adresse }}" disabled>
+
+      <label for="nom_maison">Nom de la maison :</label>
+      <input type="text" id="nom_maison" value="{{ nom }}" disabled>
+
+      <label for="password_maison">Mot de passe de la maison :</label>
+      <input type="text" id="password_maison" value="{{ password }}" disabled>
+
+      </div>
+
+    <div class="form-group">
+      <label for="statut">Email verifié :</label>
+      <input type="checkbox" id="valid_email" value="{{ email_status }}" disabled>
+
+      <label for="points">Nombre de points :</label>
+      <input type="number" id="points" value="{{ points }}" disabled>
+    </div>
+  </form>
+
+  <div class="link">
+    <a href="{% url 'home' %}">← Retour à l'accueil</a>
+  </div>
+</div>
+{% endblock %}
