@@ -1,0 +1,58 @@
+{% extends "base.html" %} 
+
+{% block title %}
+Se connecter
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <div class="form-container">
+        <h1>Se connecter à une maison</h1>
+        <form method="POST" action="#">
+            {% csrf_token %}
+            
+            <!-- Champ pour l'adresse -->
+            <label for="adresse_maison">Adresse :</label>
+            <input type="text" id="adresse_maison" name="adresse_maison" placeholder="Entrez l'adresse de la maison" required>
+            
+            <!-- Bouton de soumission -->
+            <button type="submit_search" name="submit_search" value="submit_search" class="btn-ajouter">Rechercher</button>
+        </form>
+
+        <div class="erreurs">
+            {% if messages %}
+                {% for m in messages %}
+                {{ m }}
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        {% for m in list_maisons %}
+        <form method="POST" action="#">
+            {% csrf_token %}
+            
+            <!-- Champ pour l'adresse -->
+            <label for="adresse_maison">Adresse :</label>
+            <input type="text" id="adresse_maison" name="adresse_maison" value="{{ m.adresse_maison }}" disabled>
+
+            <!-- Champ pour le nom de la maison -->
+            <label for="nom_maison">Nom de la maison :</label>
+            <input type="text" id="nom_maison" name="nom_maison" value="{{ m.nom_maison }}" disabled>
+            
+            <!-- Champ pour le mot de passe -->
+            <label for="mot_de_passe">Mot de passe de la maison :</label>
+            <input type="password" id="mot_de_passe" name="mot_de_passe" placeholder="Entrez le mot de passe" required>
+            
+            <!-- Bouton de soumission -->
+            <button type="submit_rejoindre", name="submit_rejoindre" value="{{ m.id }}" class="btn-ajouter">Rejoindre cette Maison !</button>
+        </form>
+        {% endfor %}
+
+       
+        
+    </div>
+</div>
+<br>
+<button onclick="window.history.back()" class="btn-retour">Retour</button>
+{% endblock %}
+
