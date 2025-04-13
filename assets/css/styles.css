@@ -509,3 +509,148 @@ input[type="checkbox"] {
     transform: scale(1.05);
 }
 
+
+
+
+
+
+
+
+/* style apropos de nous*/
+
+
+.about-section h2 i {
+    color: #00aaff;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    vertical-align: middle;
+}
+
+
+
+
+.main-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #004080;
+    margin-bottom: 30px;
+}
+
+.about-section {
+    margin-bottom: 40px;
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-left: 6px solid #00aaff; /* Accent vertical à gauche */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    color: #333; /* Texte noir lisible sur fond clair */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    color: #004080;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(0, 64, 128, 0.2);
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.about-section ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .about-section {
+        padding: 20px;
+        border-left: 4px solid #00aaff;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p,
+    .about-section ul li {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* style contact*/
+
+.contact-wrapper.center-only {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  .centered-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .centered-card h2 {
+    font-size: 2rem;
+    color: #00aaff;
+    margin-bottom: 20px;
+  }
+  
+  .centered-card h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .centered-card p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .centered-card a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .centered-card a:hover {
+    text-decoration: underline;
+  }
+  
+  .centered-card i {
+    margin-right: 8px;
+    color: #00aaff;
+  }
+  
