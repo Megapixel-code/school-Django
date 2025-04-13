@@ -653,4 +653,7 @@ input[type="checkbox"] {
     margin-right: 8px;
     color: #00aaff;
   }
-  
+
+  form label{
+    color: #00aaff;
+  }
