@@ -657,3 +657,7 @@ input[type="checkbox"] {
   form label{
     color: #00aaff;
   }
+
+  .form-group div div {
+    color: #000
+  }
