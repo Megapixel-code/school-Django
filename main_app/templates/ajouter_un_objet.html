@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Ajouter un Objet
+{% endblock %}
+
+{% block content %}
+<div class="page-container-objet-piece">
+    <div class="form-container">
+        <h1>Ajouter un objet</h1>
+        <form method="POST" action="#">
+            {% csrf_token %}
+            
+            <label for="nom_objet">Nom de l'objet :</label>
+            <input type="text" id="nom_objet" name="nom_objet" placeholder="Entrez le nom de l'objet" class="form-input" required>
+            
+            
+            <button type="submit", name="submit_new_objet", value="submit_new_objet" class="btn-ajouter">Ajouter</button>
+        </form>
+    </div>
+    
+</div>
+<button onclick="window.history.back()" class="btn-retour">Retour</button>
+
+{% endblock %}

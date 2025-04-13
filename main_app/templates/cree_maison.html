@@ -1,0 +1,45 @@
+{% extends "base.html" %} 
+
+{% block title %}
+Connectez vous a votre maison
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <div class="form-container">
+        <h1>Créer une maison</h1>
+        <form method="POST" action="#">
+            {% csrf_token %}
+            
+            <!-- Champ pour l'adresse -->
+            <label for="adresse_maison">Adresse de la Maison :</label>
+            <input type="text" id="adresse_maison" name="adresse_maison" placeholder="Entrez l'adresse" required>
+
+            <!-- Champ pour le nom -->
+            <label for="nom_maison">Nom de la Maison :</label>
+            <input type="text" id="nom_maison" name="nom_maison" placeholder="Entrez le nom" required>
+
+            <!-- Champ pour le mot de passe -->
+            <label for="password1">Mot de passe :</label>
+            <input type="password" id="password1" name="password1" placeholder="Entrez un mot de passe" required>
+            
+            <!-- Champ pour confirmer le mot de passe -->
+            <label for="password2">Confirmer le mot de passe :</label>
+            <input type="password" id="password2" name="password2" placeholder="Confirmez le mot de passe" required>
+
+            {% if case == 1 %}
+            <h4>Vous avez mal ecris le mot de passe</h4>
+            {% endif %}
+            
+            <!-- Bouton de soumission -->
+            <button type="submit", name="submit" value="submit" class="btn-ajouter">Créer la maison</button>
+        </form>
+
+        <!-- Bouton de retour -->
+        
+    </div>
+</div>
+<br>
+<button onclick="window.history.back()" class="btn-retour">Retour</button>
+
+{% endblock %}

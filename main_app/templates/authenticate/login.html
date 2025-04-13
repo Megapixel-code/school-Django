@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+Connexion
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>Connexion</h1>
+    <form method="post" action="" id="form">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <h2>Vos Identifiants</h2>
+
+        <label for="username">Nom d'utilisateur :</label>
+        <input type="username" id="username" name="username" required>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required>
+
+        <div id="password-error" class="error">
+          Les mots de passe ne correspondent pas.
+        </div>
+      </div>
+    </form>
+
+    <div class="erreurs">
+    {% if messages %}
+      {% for m in messages %}
+        {{ m }}
+      {% endfor %}
+    {% endif %}
+  </div>
+
+    <div class="submit-section">
+      <button type="submit" form="form" value="submit">Connexion</button>
+      <div class="link">
+        Pas de compte ? <a href="../incription">S'inscrire</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
